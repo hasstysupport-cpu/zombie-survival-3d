@@ -1,0 +1,19 @@
+{
+  "id": "survivor_male_01",
+  "type": "character",
+  "style": "stylized low-poly",
+  "scaleMeters": 1.80,
+  "animated": true,
+  "rigged": true,
+  "animations": ["idle", "walk", "run", "attack", "hit", "death"],
+  "materials": ["survivor_skin", "survivor_shirt", "survivor_pants", "survivor_boots", "survivor_hair"],
+  "collision": "capsule",
+  "collisionParams": { "radius": 0.30, "height": 1.80, "centerY": 0.90 },
+  "lod": ["high"],
+  "file": "assets/models/characters/survivor_male_01.glb",
+  "sourceBlend": "assets/models/characters/survivor_male_01.blend",
+  "forwardAxis": "+Z (glTF, after export)",
+  "dimensions": { "widthX": 0.775, "depthY": 0.29, "heightZ": 1.815 },
+  "boneCount": 18,
+  "polyCount": 216
+}
