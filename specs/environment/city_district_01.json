@@ -1,0 +1,57 @@
+{
+  "asset": "city_district_01",
+  "type": "environment_static",
+  "format": "GLB",
+  "files": {
+    "model": "assets/models/environment/city_district_01.glb",
+    "scene": "assets/models/environment/city_district_01.blend"
+  },
+  "source_tool": "tools/blender/build_city.py",
+  "dimensions_m": {
+    "x": 300.0,
+    "y": 300.0,
+    "z_max": 30.9
+  },
+  "triangles": 30620,
+  "objects_built": 2297,
+  "merged_meshes": 1,
+  "materials": 30,
+  "emissive_materials": ["sign_hospital_red", "sign_cinema", "lamp_on", "signal_red"],
+  "grid": {
+    "block_m": 36,
+    "street_width_m": 8,
+    "pitch_m": 44,
+    "blocks_per_side": 5,
+    "origin": "center of district (0,0)"
+  },
+  "enterable_buildings": 9,
+  "landmarks": [
+    { "name": "plaza", "center_m": [0, 0], "features": ["fountain", "trees", "benches", "recommended player spawn"] },
+    { "name": "hospital", "center_m": [0, 78], "block": [0, 2], "features": ["emissive red cross sign", "enterable ground floor"] },
+    { "name": "cinema", "center_m": [0, -98], "block": [0, -2], "features": ["emissive marquee", "street entrance"] },
+    { "name": "church", "center_m": [-4, -92], "block": [0, -2], "features": ["bell tower", "cross", "yard fence"] },
+    { "name": "gas_station", "center_m": [-90, 2], "block": [-2, 0], "features": ["canopy", "pumps", "sign"] },
+    { "name": "radio_tower", "center_m": [44, 44], "block": [1, 1], "features": ["lattice tower", "fence ring", "red beacon"] }
+  ],
+  "street_props": {
+    "cars": 16,
+    "flipped_cars": 2,
+    "dumpsters": 4,
+    "traffic_cones": 4,
+    "jersey_barricades": 4,
+    "sandbags": 26,
+    "streetlights": 40
+  },
+  "collision": {
+    "strategy": "concave trimesh / octree",
+    "walkable": "roads, sidewalks, plaza, building interiors",
+    "notes": "cars, barricades, sandbags, fences are blockers; enterable buildings have doorway gaps kept clear"
+  },
+  "forward_axis": "+Z (glTF convention)",
+  "units": "meters",
+  "integration": {
+    "fog": "render previews use distance fog (start ~4-40m, depth 60-260m per shot); in-engine use three.js FogExp2 density ~0.008-0.012",
+    "player_spawn": [0, -6, 0.0],
+    "scale_check": "survivor 1.82m tall vs door 2.2m"
+  }
+}
